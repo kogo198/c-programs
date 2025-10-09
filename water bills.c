@@ -6,29 +6,24 @@ DISCRIPTION:a program to promp user to enter number of water units comsumed with
 #include <stdio.h>
 int main() {
     int units;
-    float bill;
+    float total_bill;
 
-    // Input number of water units consumed
-    printf("Enter number of water units consumed: ");
+    // Prompt the user to enter the number of water units consumed
+    printf("Enter the number of water units consumed: ");
     scanf("%d", &units);
 
-    // Calculate bill based on units consumed
-    if (units <= 45) {
-        bill = units * 22.77; 
-        // Rate for first 30 units
-    } else if (units <= 100) {
-        bill = (45 * 0.50) + ((units - 45) * 0.75);
-         // Rate for next 70 units
-    } else if (units <= 200) {
-        bill = (45 * 0.50) + (70 * 0.75) + ((units - 100) * 1.20); 
-        // Rate for next 100 units
+    // Calculate the total bill based on consumption rules
+    if (units <= 30) {
+        total_bill = units * 20.0;
+    } else if (units <= 60) {
+        total_bill = (30 * 20.0) + ((units - 30) * 25.0);
     } else {
-        bill = (30 * 0.50) + (70 * 0.75) + (100 * 1.20) + ((units - 200) * 1.50);
-         // Rate for above 200 units
+        total_bill = (30 * 20.0) + (30 * 25.0) + ((units - 60) * 30.0);
     }
 
-    // Output the total bill
-    printf("Total water bill: Ksh %.2f\n", bill);
+    // Display the total bill in KES with two decimal places
+    printf("Total bill: KES %.2f\n", total_bill);
 
     return 0;
 }
+
