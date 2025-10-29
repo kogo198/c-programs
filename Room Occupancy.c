@@ -7,7 +7,7 @@ DISCRIPTION:A SIMPLE 2D C CODE FOR ROOM OCCUPACTION
 int main(){
 	int i,j;
 	int occupancy[5][10];
-	 printf("Enter 7 revenue:\n");
+	 printf("Enter occupancy :\n");
     for (i = 0; i < 5; i++) {
     	for(j=0;j<10;j++){
         printf("occupancy %d: ", i + 1);
@@ -26,4 +26,5 @@ int main(){
 	
 	
 	return 0;
+
 }
